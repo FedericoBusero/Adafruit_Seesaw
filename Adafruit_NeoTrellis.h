@@ -44,6 +44,7 @@ public:
   void unregisterCallback(uint8_t x, uint8_t y);
 
   void activateKey(uint8_t key, uint8_t edge, bool enable = true);
+  void activateKey(uint8_t x, uint8_t y, uint8_t edge, bool enable = true);
 
   void setPixelColor(uint8_t x, uint8_t y, uint32_t color);
   void setPixelColor(uint16_t num, uint32_t color);

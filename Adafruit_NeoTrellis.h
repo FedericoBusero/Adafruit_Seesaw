@@ -39,9 +39,15 @@ public:
   bool begin(uint8_t addr = NEO_TRELLIS_ADDR, int8_t flow = -1);
 
   void registerCallback(uint8_t key, TrellisCallback (*cb)(keyEvent));
+  void registerCallback(uint8_t x, uint8_t y, TrellisCallback (*cb)(keyEvent));
   void unregisterCallback(uint8_t key);
+  void unregisterCallback(uint8_t x, uint8_t y);
 
   void activateKey(uint8_t key, uint8_t edge, bool enable = true);
+
+  void setPixelColor(uint8_t x, uint8_t y, uint32_t color);
+  void setPixelColor(uint16_t num, uint32_t color);
+  void show();
 
   void read(bool polling = true);
 
